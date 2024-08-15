@@ -1,0 +1,67 @@
+/* styles.css */
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #F5DEB3;
+}
+
+.slider {
+    position: relative;
+    width: 100%;
+    max-width: 500px; /* Width of the slider */
+    margin: auto;
+    overflow: hidden; /* Ensures border-radius applies properly */
+    border: 0; /* No border for visual debugging */
+    border-radius: 10px; /* Border-radius for rounded corners */
+}
+
+.slides {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.slide {
+    min-width: 100%;
+    box-sizing: border-box;
+}
+
+.slide img {
+    width: 100%;
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 10px; /* Ensure images follow border-radius */
+    display: block; /* Prevent space below image */
+}
+
+button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: transparent;
+    color: lightgray;
+    border: none;
+    padding: 5px; /* Adjust padding */
+    cursor: pointer;
+    z-index: 100;
+    font-size: 30px; /* Font size for arrows */
+    line-height: 1;
+    width: 25px; /* Width of the button */
+    height: 25px; /* Height of the button */
+    text-align: center;
+}
+
+button:hover {
+    color: white;
+}
+
+.prev {
+    left: 10px; /* Adjusted for better visibility */
+}
+
+.next {
+    right: 10px; /* Adjusted for better visibility */
+}
